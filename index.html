@@ -8,6 +8,8 @@
 </head>
 <body>
 
+    <button id="btn-tema">🌙 Modo escuro</button>
+
     <h1>JG'Imports</h1>   
     <h2>Seja bem vindo à JG'Imports</h2>
     <img src="logotipo.png" alt="">
@@ -26,6 +28,20 @@
     <footer>
         <p>&copy; 2026 JG'Imports. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        const btn = document.getElementById('btn-tema');
+
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('escuro');
+
+            if (document.body.classList.contains('escuro')) {
+                btn.textContent = '☀️ Modo claro';
+            } else {
+                btn.textContent = '🌙 Modo escuro';
+            }
+        });
+    </script>
 
 </body>
 </html>
